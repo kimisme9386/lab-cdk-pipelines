@@ -29,7 +29,11 @@
     },
     {
       "name": "aws-cdk",
-      "version": "^1.95.2",
+      "version": "1.119.0",
+      "type": "build"
+    },
+    {
+      "name": "aws-lambda",
       "type": "build"
     },
     {
@@ -93,52 +97,57 @@
     },
     {
       "name": "@aws-cdk/assert",
-      "version": "^1.95.2",
+      "version": "1.119.0",
+      "type": "runtime"
+    },
+    {
+      "name": "@aws-cdk/aws-apigateway",
+      "version": "1.119.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-codebuild",
-      "version": "^1.95.2",
+      "version": "1.119.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-codepipeline",
-      "version": "^1.95.2",
+      "version": "1.119.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-ecr",
-      "version": "^1.95.2",
+      "version": "1.119.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-events-targets",
-      "version": "^1.95.2",
+      "version": "1.119.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "^1.95.2",
+      "version": "1.119.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-lambda",
-      "version": "^1.95.2",
+      "version": "1.119.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-s3",
-      "version": "^1.95.2",
+      "version": "1.119.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.95.2",
+      "version": "1.119.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/pipelines",
-      "version": "^1.95.2",
+      "version": "1.119.0",
       "type": "runtime"
     },
     {

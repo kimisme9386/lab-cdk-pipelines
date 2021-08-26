@@ -1,6 +1,7 @@
 const { AwsCdkTypeScriptApp, DependenciesUpgradeMechanism } = require('projen');
 const project = new AwsCdkTypeScriptApp({
-  cdkVersion: '1.95.2',
+  cdkVersion: '1.119.0',
+  cdkVersionPinning: true,
   defaultReleaseBranch: 'main',
   name: 'lab-cdk-pipelines',
   releaseWorkflow: false,
@@ -9,6 +10,7 @@ const project = new AwsCdkTypeScriptApp({
   depsUpgrade: DependenciesUpgradeMechanism.NONE,
   cdkDependencies: [
     '@aws-cdk/pipelines',
+    '@aws-cdk/aws-apigateway',
     '@aws-cdk/aws-events-targets',
     '@aws-cdk/aws-codebuild',
     '@aws-cdk/aws-codepipeline',
@@ -23,7 +25,11 @@ const project = new AwsCdkTypeScriptApp({
     'eslint-config-prettier',
     'eslint-plugin-prettier',
     '@types/js-yaml@^3.12.5',
+    'aws-lambda',
   ],
   deps: ['js-yaml@^3.14.1'],
+  context: {
+    '@aws-cdk/core:newStyleStackSynthesis': true,
+  },
 });
 project.synth();
