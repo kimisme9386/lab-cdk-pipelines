@@ -1,11 +1,13 @@
+import { SynthUtils } from '@aws-cdk/assert';
 import '@aws-cdk/assert/jest';
 import { App } from '@aws-cdk/core';
-import { MyStack } from '../src/main';
+import { CdkpipelinesDemoPipelineStack } from '../src/cdkpipelines-demo-pipeline-stack';
 
 test('Snapshot', () => {
   const app = new App();
-  const stack = new MyStack(app, 'test');
+  const stack = new CdkpipelinesDemoPipelineStack(app, 'test', {
+    env: { account: '482631629698', region: 'ap-northeast-1' },
+  });
 
-  expect(stack).not.toHaveResource('AWS::S3::Bucket');
-  expect(app.synth().getStackArtifact(stack.artifactId).template).toMatchSnapshot();
+  expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
 });
