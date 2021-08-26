@@ -65,7 +65,7 @@ Object {
                   "Version": "1",
                 },
                 "Configuration": Object {
-                  "EnvironmentVariables": "[{\\"name\\":\\"_PROJECT_CONFIG_HASH\\",\\"type\\":\\"PLAINTEXT\\",\\"value\\":\\"00ebacfb32b1bde8d3638577308e7b7144dfa3b0a58a83bc6ff38a3b1f26951c\\"}]",
+                  "EnvironmentVariables": "[{\\"name\\":\\"_PROJECT_CONFIG_HASH\\",\\"type\\":\\"PLAINTEXT\\",\\"value\\":\\"31aadbdc122a7999d1a1780c4c038b7c1524821efe6867424d3bff237630a9ac\\"}]",
                   "ProjectName": Object {
                     "Ref": "PipelineBuildSynthCdkBuildProject6BEFA8E6",
                   },
@@ -175,9 +175,10 @@ Object {
   \\"phases\\": {
     \\"build\\": {
       \\"commands\\": [
-        \\"npm ci\\",
-        \\"npm run build\\",
-        \\"npx cdk synth\\"
+        \\"yarn global add aws-cdk@1.119.0\\",
+        \\"yarn --frozen-lockfile\\",
+        \\"yarn build\\",
+        \\"cdk synth\\"
       ]
     }
   },
