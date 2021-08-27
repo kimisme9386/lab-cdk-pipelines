@@ -32,7 +32,7 @@ export class CdkpipelinesDemoPipelineStack extends Stack {
         commands: [
           'yarn global add aws-cdk@1.119.0',
           'yarn --frozen-lockfile',
-          'yarn build',
+          'yarn compile',
           'cdk synth',
         ],
       }),
