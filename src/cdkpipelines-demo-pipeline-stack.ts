@@ -31,7 +31,7 @@ export class CdkpipelinesDemoPipelineStack extends Stack {
 
         // Install dependencies, build and run cdk synth
         commands: [
-          'yarn global add aws-cdk@1.119.0',
+          'yarn global add aws-cdk',
           'yarn --frozen-lockfile',
           'yarn compile',
           'cdk synth',

@@ -1,7 +1,6 @@
 const { AwsCdkTypeScriptApp, DependenciesUpgradeMechanism } = require('projen');
 const project = new AwsCdkTypeScriptApp({
   cdkVersion: '1.120.0',
-  cdkVersionPinning: true,
   defaultReleaseBranch: 'main',
   name: 'lab-cdk-pipelines',
   releaseWorkflow: false,
