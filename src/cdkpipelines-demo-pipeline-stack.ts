@@ -26,7 +26,7 @@ export class CdkpipelinesDemoPipelineStack extends Stack {
           {
             connectionArn:
               'arn:aws:codestar-connections:ap-northeast-1:482631629698:connection/6a6dd11d-2713-4129-9e5d-23289c8968d6',
-          }
+          },
         ),
 
         // Install dependencies, build and run cdk synth
@@ -44,13 +44,13 @@ export class CdkpipelinesDemoPipelineStack extends Stack {
     pipeline.addStage(
       new CdkpipelinesDemoStage(this, 'PreProd', {
         env: { account: '482631629698', region: 'ap-northeast-1' },
-      })
+      }),
     );
 
     pipeline.addStage(
       new CdkpipelinesDemoStage(this, 'Prod', {
         env: { account: '340227574277', region: 'ap-northeast-1' },
-      })
+      }),
     );
   }
 }
